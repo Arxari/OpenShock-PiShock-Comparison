@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                background: #1a1b26;
+                color: #c0caf5;
+                font-family: monospace;
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+            }
+
+            .container {
+                width: 900px;
+            }
+
+            h1 {
+                color: #fff;
+                margin-bottom: 2rem;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .comparison-table {
+                width: 100%;
+                border-spacing: 0;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #1f2335;
+            }
+
+            .header-row {
+                background: #24283b;
+            }
+
+            .header-row th {
+                padding: 0.75rem;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .header-row th:first-child {
+                text-align: left;
+                width: 25%;
+            }
+
+            .openShock {
+                color: #e14a6d;
+            }
+
+            .piShock {
+                color: #79c6db;
+            }
+
+            tr:nth-child(even) {
+                background: #292e42;
+            }
+
+            td {
+                padding: 0.75rem;
+                vertical-align: top;
+            }
+
+            td:not(:first-child) {
+                text-align: center;
+                width: 37.5%;
+            }
+
+            .emoji {
+                font-size: 1.5rem;
+                line-height: 1;
+                display: block;
+                margin-bottom: 0.25rem;
+            }
+
+            .detail {
+                font-size: 0.8rem;
+                color: #565f89;
+                margin-top: 0.25rem;
+            }
+
+            .feature-description {
+                color: #565f89;
+                font-size: 0.8rem;
+                margin-top: 0.25rem;
+            }
+
+            .legend {
+                margin-top: 1rem;
+                display: flex;
+                gap: 2rem;
+                justify-content: center;
+                font-size: 1.2rem;
+            }
+
+            .legend-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            a {
+                color: #7aa2f7;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Comparison of OpenShock and PiShock</h1>
+
+            <table class="comparison-table">
+                <tr class="header-row">
+                    <th>Features</th>
+                    <th class="openShock">OpenShock</th>
+                    <th class="piShock">PiShock</th>
+                </tr>
+                <tr>
+                    <td>Base price</td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        $60
+                        <div class="detail">
+                            Includes a spacer + hardware ESTOP on the hub
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😢</span>
+                        $160
+                        <div class="detail">
+                            Doesn't include a spacer nor hardware ESTOP
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        API
+                        <div class="feature-description">
+                            Both APIs are free and well documented
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">
+                            <a
+                                href="https://api.openshock.app/swagger/index.html?urls.primaryName=2"
+                                >Swagger</a
+                            >
+                            + <a href="https://wiki.openshock.org/dev/">wiki</a>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">
+                            <a href="https://apidocs.pishock.com/#top"
+                                >API Docs</a
+                            >
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Live shocking
+                        <div class="feature-description">
+                            Instead of sending shocks you can go up/down in
+                            intensity in real time
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">
+                            Same functionality but <a href="#">different UI</a>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">
+                            Same functionality but <a href="#">different UI</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile app</td>
+                    <td>
+                        <span class="emoji">😐</span>
+                        <div class="detail">Android-only app</div>
+                    </td>
+                    <td>
+                        <span class="emoji">😢</span>
+                        <div class="detail">No apps</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Multiple shocker support
+                        <div class="feature-description">
+                            Numbers are per hub
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">Supports up to 12 shockers</div>
+                    </td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">Supports up to 8 shockers</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Integrations
+                        <div class="feature-description">
+                            Click <a href="#">here</a> for a list of
+                            integrations and comparison
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">
+                            Integrations made both by OpenShock and community
+                            members
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">
+                            Integrations primarily made by the community
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DIY hardware</td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">
+                            Multiple shocker type support, hubs can be custom
+                            built, 3D print files for spacers available
+                        </div>
+                    </td>
+                    <td>
+                        <span class="emoji">😢</span>
+                        <div class="detail">
+                            Supports a singular shocker type, can be bought from
+                            another source but doing so is discouraged and not
+                            officially supported
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Open source</td>
+                    <td>
+                        <span class="emoji">😊</span>
+                        <div class="detail">Full source on GitHub</div>
+                    </td>
+                    <td>
+                        <span class="emoji">😢</span>
+                        <div class="detail">
+                            Closed source software and hardware
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Local control option</td>
+                    <td>
+                        <span class="emoji">😐</span>
+                        <div class="detail">Supports 433 MHz remotes</div>
+                    </td>
+                    <td>
+                        <span class="emoji">😐</span>
+                        <div class="detail">Supports 433 MHz remotes</div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <span>😊</span>
+                    <span>Full support</span>
+                </div>
+                <div class="legend-item">
+                    <span>😐</span>
+                    <span>Partial support</span>
+                </div>
+                <div class="legend-item">
+                    <span>😢</span>
+                    <span>No support</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
